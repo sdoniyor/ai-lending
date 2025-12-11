@@ -6,10 +6,10 @@
 }
 
 body {
-  background:rgba(2, 10, 24, 1);
+  background: rgba(2, 10, 24, 1);
   color: #fff;
 }
-h1{
+h1 {
   margin-bottom: 30px;
 }
 
@@ -19,8 +19,7 @@ h1{
   padding: 0 20px;
 }
 
-
-
+/* --- Header & Nav --- */
 .header {
   padding: 20px 0;
   background: #0b1221;
@@ -66,9 +65,7 @@ h1{
   border: none;
 }
 
-
-
-
+/* --- Hero Section --- */
 .hero {
   padding: 60px 0;
 }
@@ -111,7 +108,7 @@ h1{
 }
 
 .secondary {
-  background:#3f7cfb;
+  background: #3f7cfb;
   border: 1px solid #3f7cfb;
   color: white;
 }
@@ -123,14 +120,7 @@ h1{
   margin: 0 auto;
 }
 
-
-
-.partners {
-  padding: 40px 0 70px;
-  width: 1146px;
-  height: 59px;
-}
-
+/* --- Partners Section --- */
 .partners-row {
   display: flex;
   justify-content: space-between;
@@ -152,16 +142,26 @@ h1{
   transform: scale(1.05);
 }
 
-
-.about_section{
+/* --- About Section 1 & 2 --- */
+.about_section {
   display: flex;
   justify-content: center;
   margin-bottom: 90px;
+  padding: 0 20px; /* Added padding for smaller screens */
 }
-.about_header{
+.about2_section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 90px;
+  padding: 0 20px; /* Added padding for smaller screens */
+}
+
+.about_header {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 1200px; /* Constrain max-width */
+  width: 100%;
 }
 
 .about_img img {
@@ -171,13 +171,14 @@ h1{
   margin: 0 auto;
 }
 
-.about_text{
+.about_text {
   max-width: 430px;
   width: 100%;
   margin-left: 68px;
 }
 
-.cards-section{
+/* --- Cards Section (Carousel) --- */
+.cards-section {
   height: 600px;
   margin: 0;
   display: grid;
@@ -187,47 +188,47 @@ h1{
   justify-items: center;
 }
 
-.item{
-    background-color: rgba(44, 54, 71, 1);
-    border-radius: 8px;
-    padding: 32px;
-    flex: 1 1 250px;
-    min-height: 360px; 
-    justify-content: space-between; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.item {
+  background-color: rgba(44, 54, 71, 1);
+  border-radius: 8px;
+  padding: 32px;
+  flex: 1 1 250px;
+  min-height: 360px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon-select {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    max-width: 100px;
-    height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  max-width: 100px;
+  height: auto;
 }
 
 .card-title {
-    color: var(--text-light);
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 1.4;
-    text-align: center; 
-    min-height: 52px;
+  color: var(--text-light);
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-align: center;
+  min-height: 52px;
 }
 
 .card-text {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center; 
-    min-height: 90px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+  min-height: 90px;
 }
-.card-img{
+.card-img {
   width: 98%;
 }
 
@@ -252,39 +253,41 @@ div.item {
   position: absolute;
   width: 300px;
   height: 400px;
-  background-color: coral;
+  /* background-color: coral; Remove unnecessary background */
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
   transform: rotateY(calc(-10deg * var(--r)))
     translateX(calc(-300px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
+  /* Added to fix Z-index issue on smaller screens later */
+  border: none !important;
 }
 
 div.item:nth-of-type(1) {
   --offset: 1;
   background-color: rgba(44, 54, 71, 1);
-  border: solid black;
+  /* border: solid black; Removed border */
 }
 div.item:nth-of-type(2) {
   --offset: 2;
   background-color: rgba(44, 54, 71, 1);
-  border: solid black;
+  /* border: solid black; Removed border */
 }
 div.item:nth-of-type(3) {
   --offset: 3;
   background-color: rgba(44, 54, 71, 1);
-  border: solid black;
+  /* border: solid black; Removed border */
 }
 div.item:nth-of-type(4) {
   --offset: 4;
   background-color: rgba(44, 54, 71, 1);
-  border: solid black;
+  /* border: solid black; Removed border */
 }
 div.item:nth-of-type(5) {
   --offset: 5;
   background-color: rgba(44, 54, 71, 1);
-  border: solid black;
+  /* border: solid black; Removed border */
 }
 
 input:nth-of-type(1) {
@@ -304,7 +307,7 @@ input:nth-of-type(2):checked ~ main#carousel {
 }
 
 input:nth-of-type(3) {
-  grid-column: 4 /5;
+  grid-column: 4 / 5;
   grid-row: 2 / 3;
 }
 input:nth-of-type(3):checked ~ main#carousel {
@@ -327,63 +330,55 @@ input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   accent-color: rgba(44, 54, 71, 1);
 }
 
-
-.about2_section{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 90px;
-}
-
-
-
+/* --- Footer --- */
 .footer {
-padding: 60px 10%;
-background: #0b1221;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 40px;
+  padding: 60px 10%;
+  background: #0b1221;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 .footer-column {
-max-width: 250px;
+  max-width: 250px;
 }
 .footer-column h3 {
-font-size: 16px;
-margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 1px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .footer-column p,
 .footer-column a,
 .footer-column li {
-font-size: 14px;
-color: #c7c7c7;
-text-decoration: none;
-margin: 16px 0;
-display: block;
+  font-size: 14px;
+  color: #c7c7c7;
+  text-decoration: none;
+  margin: 16px 0;
+  display: block;
 }
 .footer-column ul {
-list-style: none;
-padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .footer-icons {
-display: flex;
-gap: 12px;
-margin: 15px 0;
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
 }
 .footer-icons i {
-font-size: 18px;
-cursor: pointer;
+  font-size: 18px;
+  cursor: pointer;
 }
 .footer-bottom {
-text-align: center;
-padding: 20px;
-color: #888;
-font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 14px;
 }
 .footer_logo {
   display: flex;
@@ -393,10 +388,152 @@ font-size: 14px;
   font-weight: 600;
   color: #4aa3ff;
 }
-.footer_img{
+.footer_img {
   margin-right: 10px;
 }
-.footer_txt{
+.footer_txt {
   font-weight: bold;
   color: #fff;
+}
+
+/* ================================================= */
+/* ============= MEDIA QUERIES (ADAPTATION) ======== */
+/* ================================================= */
+
+/* --- Tablet (Max 1024px) --- */
+@media (max-width: 1024px) {
+  /* Hero Section */
+  .hero-text h1 {
+    font-size: 44px;
+  }
+
+  /* About Section */
+  .about_text {
+    margin-left: 40px;
+    max-width: 400px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 60px 5%;
+    justify-content: space-around;
+  }
+}
+
+/* --- Mobile (Max 768px) --- */
+@media (max-width: 768px) {
+  /* Header & Nav */
+  .menu {
+    display: none; /* Скрываем меню на мобильных */
+  }
+
+  /* Hero Section */
+  .hero-grid {
+    grid-template-columns: 1fr; /* Одна колонка */
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1; /* Перемещаем изображение наверх */
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  /* Partners Row */
+  .partners-row {
+    justify-content: center;
+    gap: 20px;
+  }
+  .partners-row img {
+    max-width: 100px;
+    max-height: 30px;
+  }
+
+  /* About Section */
+  .about_header {
+    flex-direction: column; /* Вертикальный стек */
+    text-align: center;
+  }
+
+  .about_text {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .about_text .btn {
+    margin-top: 20px;
+  }
+  .about_img img {
+    max-width: 90%;
+  }
+
+  /* Cards Section (Carousel) - Simplification for Mobile */
+  .cards-section {
+    grid-template-rows: auto auto; /* Изменяем на автоматическую высоту */
+    height: auto; /* Убираем фиксированную высоту */
+    padding: 40px 0;
+    grid-template-columns: 1fr; /* Упрощаем сетку */
+  }
+
+  main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: auto;
+    overflow: visible; /* Показываем все карточки */
+    position: static;
+    transform-style: flat;
+    perspective: none;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  div.item {
+    position: static; /* Статичное позиционирование */
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    transform: none !important; /* Отключаем 3D трансформации */
+    z-index: auto !important;
+    min-height: auto;
+  }
+
+  /* Скрываем радио-кнопки (они не нужны при статичном отображении) */
+  input[type='radio'] {
+    display: none;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
+    flex-direction: column; /* Вертикальный стек */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-column {
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 1px solid #1a2434;
+    padding-bottom: 20px;
+  }
+
+  .footer-column:last-child {
+    border-bottom: none;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
 }
