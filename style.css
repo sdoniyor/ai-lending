@@ -53,6 +53,9 @@ h1 {
   color: #fff;
   opacity: 0.9;
 }
+.menu a:hover{
+  color: #4aa3ff
+}
 
 .btn {
   text-decoration: none;
@@ -63,8 +66,13 @@ h1 {
   background: #3f7cfb;
   color: #fff;
   border: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
 }
-
+.btn:active {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
 /* --- Hero Section --- */
 .hero {
   padding: 60px 0;
@@ -343,6 +351,7 @@ input[type='radio'] {
   flex-wrap: wrap;
   gap: 40px;
 }
+
 .footer-column {
   max-width: 250px;
 }
@@ -361,6 +370,10 @@ input[type='radio'] {
   margin: 16px 0;
   display: block;
 }
+.footer a:hover{
+  color: #4aa3ff
+}
+
 .footer-column ul {
   list-style: none;
   padding: 0;
