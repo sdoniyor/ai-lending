@@ -1,4 +1,3 @@
-
 const openBtn=document.getElementById("openbtn")
 const modal = document.getElementById("modal")
 const closeBtn = document.getElementById("closebtn")
